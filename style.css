@@ -1,0 +1,247 @@
+/* إعدادات عامة وتنسيق النصوص والألوان الأساسية */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19; /* لون خلفية داكن فخم جداً / Luxury Dark Background */
+    display: flex;
+    min-height: 100vh;
+}
+
+/* تنسيق الصورة الشخصية في القائمة الجانبية */
+.img-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #d4af37; /* إطار ذهبي فخم / Luxury Gold Border */
+    flex-shrink: 0;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #d4af37; /* اسم المستخدم بلون ذهبي / Gold Username */
+    white-space: nowrap;
+}
+
+/* القائمة الجانبية المتجاورة */
+.menu {
+    background-color: #111827; /* لون فخم للقائمة الجانبية / Sidebar Background */
+    width: 80px;
+    height: 100vh;
+    padding: 20px 15px;
+    position: sticky;
+    top: 0;
+    overflow-x: hidden;
+    transition: width 0.4s ease;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+/* تكبير القائمة عند تمرير الماوس */
+.menu:hover {
+    width: 260px;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border-radius: 12px;
+    gap: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* تأثير التمرير الفخم وتحديد الصفحة النشطة */
+ul li a:hover, 
+.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.05));
+    border-left: 4px solid #d4af37;
+    color: #d4af37;
+}
+
+.log-out {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.log-out a {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444 !important;
+}
+
+.log-out a:hover {
+    background-color: #ef4444;
+    color: #fff !important;
+}
+
+ul li i {
+    font-size: 22px;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* محتوى الموقع الرئيسي */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-x: auto;
+}
+
+/* شريط العناوين بتصميم متدرج فخم */
+.title-info {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.title-info p {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.title-info i {
+    color: #d4af37;
+    font-size: 20px;
+}
+
+/* مربعات الإحصائيات (Cards) */
+.data-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.data-info .box {
+    background-color: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 130px;
+    flex-basis: 220px;
+    flex-grow: 1;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.data-info .box:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+}
+
+.data-info .box i {
+    font-size: 35px;
+    color: #d4af37;
+}
+
+.data-info .box .data {
+    text-align: right;
+}
+
+.data-info .box .data p {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 5px;
+}
+
+.data-info .box .data span {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* جدول المنتجات الفخم */
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #1f2937;
+    color: #d4af37;
+    height: 45px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td {
+    background-color: #111827;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+/* تدوير زوايا الجدول */
+tr th:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+tr td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; }
+tr td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+td:hover {
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.price, .count {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.price {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+}
+
+.count {
+    background-color: rgba(212, 175, 55, 0.15);
+    color: #d4af37;
+}
